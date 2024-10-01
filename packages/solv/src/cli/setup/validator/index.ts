@@ -40,7 +40,7 @@ const setupMainnetValidator = async (config: DefaultConfigType) => {
     case ValidatorType.JITO:
       console.log('JITO Validator Setup for Mainnet')
       const jitoConfig = await readOrCreateJitoConfig()
-      //installJito(version)
+      installJito(version)
       startupScript = startJitoValidatorScript(
         jitoConfig.commissionBps,
         jitoConfig.relayerUrl,
