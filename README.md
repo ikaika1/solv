@@ -245,15 +245,11 @@ nvm use 20
 
 npm install -g pnpm
 
-pnpm install
-
-pnpm run build
-
-ln -s /home/solv/solv/packages/solv/dist/index.js /home/solv/.nvm/versions/node/v20.17.0/bin/solv
-
-chmod +x /home/solv/solv/packages/solv/dist/index.js
-
-echo 'export PATH="/home/solv/solv/packages/solv/dist:$PATH"' >> ~/.profile
+pnpm install \
+pnpm run build \
+ln -s /home/solv/solv/packages/solv/dist/index.js /home/solv/.nvm/versions/node/v20.17.0/bin/solv \
+chmod +x /home/solv/solv/packages/solv/dist/index.js \
+echo 'export PATH="/home/solv/solv/packages/solv/dist:$PATH"' >> ~/.profile \
 
 source ~/.profile
 
