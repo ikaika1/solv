@@ -1,13 +1,20 @@
+// 必要なモジュールをインポート
 import { VERSION_JITO_TESTNET } from '@/config/versionConfig'
 import { spawnSync } from 'child_process'
-import * as path from 'path'
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
 
+// __dirname を定義
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+// installJito 関数の定義
 export const installJito = (version = VERSION_JITO_TESTNET) => {
   // タグをフォーマット
   const tag = `v${version}-jito-mod`
-  
+
   // クローン先のディレクトリを定義（ここではスクリプト実行ディレクトリ内にjito-solanaフォルダを作成）
-  const cloneDir = path.join(__dirname, 'jito-solana')
+  const cloneDir = join(__dirname, 'jito-solana')
 
   try {
     // 1. リポジトリをクローン
@@ -16,7 +23,7 @@ export const installJito = (version = VERSION_JITO_TESTNET) => {
       stdio: 'inherit',
       shell: true,
     })
-    
+
     // 2. タグにチェックアウト
     console.log(`Checking out tag ${tag}`)
     spawnSync('git', ['checkout', `tags/${tag}`], {
@@ -49,8 +56,8 @@ export const installJito = (version = VERSION_JITO_TESTNET) => {
     console.log(`Current commit hash: ${ciCommit}`)
 
     // 5. cargo-install-all.sh スクリプトを実行
-    const installScript = path.join(cloneDir, 'scripts', 'cargo-install-all.sh')
-    const installPath = path.join(
+    const installScript = join(cloneDir, 'scripts', 'cargo-install-all.sh')
+    const installPath = join(
       process.env.HOME || process.env.USERPROFILE || '~',
       '.local',
       'share',
