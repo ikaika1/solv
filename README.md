@@ -232,7 +232,7 @@ The package is available as open source under the terms of the [Apache-2.0 Licen
 
 #ソースからビルドする
 ```
-pnpm remove -g solv
+pnpm remove -g @epics-dao/solv
 
 rm -rf /home/solv/.local/share/pnpm/solv
 
