@@ -249,11 +249,11 @@ pnpm install
 
 pnpm run build
 
-ln -s /home/ubuntu/solv/packages/solv/dist/index.js /home/ubuntu/.nvm/versions/node/v20.17.0/bin/solv
+ln -s /home/solv/solv/packages/solv/dist/index.js /home/solv/.nvm/versions/node/v20.17.0/bin/solv
 
-chmod +x /home/ubuntu/solv/packages/solv/dist/index.js
+chmod +x /home/solv/solv/packages/solv/dist/index.js
 
-echo 'export PATH="/home/ubuntu/solv/packages/solv/dist:$PATH"' >> ~/.profile
+echo 'export PATH="/home/solv/solv/packages/solv/dist:$PATH"' >> ~/.profile
 
 source ~/.profile
 
