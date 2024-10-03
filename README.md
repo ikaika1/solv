@@ -232,6 +232,9 @@ The package is available as open source under the terms of the [Apache-2.0 Licen
 
 #ソースからビルドする
 
+pnpm remove -g solv
+
+rm -rf /home/solv/.local/share/pnpm/solv
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
