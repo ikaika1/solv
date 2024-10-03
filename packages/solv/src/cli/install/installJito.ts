@@ -2,11 +2,16 @@ import { VERSION_JITO_TESTNET } from '@/config/versionConfig'
 import { spawnSync } from 'child_process'
 import { chmodSync } from 'fs'
 import { join } from 'path'
+import { fileURLToPath } from 'url'
+
+// __dirname を定義
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = join(__filename, '..')  // 現在のディレクトリを取得
 
 // installJito 関数の定義
 export const installJito = (version = VERSION_JITO_TESTNET) => {
   const tag = `v${version}-jito-mod`
-  const scriptPath = join(__dirname, 'installJito.sh')  // シェルスクリプトのパス
+  const scriptPath = join(__dirname, '../src/cli/install/instalJlito.sh')  // シェルスクリプトのパス
 
   try {
     // スクリプトに実行権限を付与
