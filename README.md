@@ -253,7 +253,7 @@ ln -s /home/solv/solv/packages/solv/dist/index.js /home/solv/.nvm/versions/node/
 
 chmod +x /home/solv/solv/packages/solv/dist/index.js
 
-echo 'export PATH="/home/solv/solv/packages/solv/dist:$PATH"' >> ~/.profile
+echo 'export PATH=/home/solv/.nvm/versions/node/v20.18.0/bin:$PATH' >> ~/.bashrc
 
 source ~/.profile
 
