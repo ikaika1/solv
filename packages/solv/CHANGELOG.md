@@ -1,5 +1,14 @@
 # @epics-dao/solv
 
+## 6.0.0
+
+### Major Changes
+
+- [`8ed2403`](https://github.com/EpicsDAO/solv/commit/8ed2403fd0eefb8d9cc2a0a2ad80d145eb549243) - Release v5.0.0
+
+  - Major version bump for the solv CLI package.
+  - No code changes in this changeset; preparing for the next major release cut.
+
 ## 4.7.7
 
 ### Patch Changes
